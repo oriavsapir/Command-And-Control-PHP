@@ -1,0 +1,30 @@
+.ol-attack {
+    list-style-type: none;
+    counter-reset: li;
+  }
+  
+  .explain-attack {
+    display: none;
+    list-style-type: none;
+    font-size: small;
+    margin-right: 0.26em;
+  }
+  
+  .attack-list {
+    font-size: medium;
+  }
+  
+  .attack-list:before {
+    counter-increment: li;
+    content: counter(li, decimal-leading-zero);
+    color: red;
+    margin-right: 0.23em;
+  }
+  div.dataTables_filter,
+  div.dataTables_length {
+    display: inline-block;
+  }
+
+  .dataTables_filter {
+    float: right;
+  }
