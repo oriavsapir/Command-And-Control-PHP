@@ -5,7 +5,7 @@ https://user-images.githubusercontent.com/85383966/172116231-e8ba1f94-cb7a-4332-
 
 
 # WorkFlow:  
-![workflow](https://user-images.githubusercontent.com/85383966/172119858-380f1671-bc75-440a-900e-869ca8a66b50.png)
+![workflow](https://user-images.githubusercontent.com/85383966/172119858-380f1671-bc75-440a-900e-869ca8a66b50.png) 
 
 
 ## GUI Preview  
