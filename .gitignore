@@ -1,0 +1,18 @@
+
+# Logs and backups #
+#####################
+logs/
+backup/
+
+# Composer generated files #
+#############################
+/vendor/
+composer.lock
+.env
+
+# PHPUnit generated files #
+###########################
+phpunit.xml
+/tests/
+
+
