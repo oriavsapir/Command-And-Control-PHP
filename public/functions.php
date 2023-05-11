@@ -19,7 +19,7 @@ function OS_list($db, $os)
     $sql = "SELECT user_identifier,OS FROM victims WHERE OS LIKE ?;";
     $stmt = mysqli_stmt_init($db);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        echo "SQL4 statement failed!";
+        echo "SQL statement failed!";
     } else {
         mysqli_stmt_bind_param($stmt, "s", $os);
         mysqli_stmt_execute($stmt);
@@ -35,7 +35,7 @@ function OS_list_selected($db, $os){
         $sql = "SELECT user_identifier,OS FROM victims WHERE user_identifier LIKE ?;";
         $stmt = mysqli_stmt_init($db);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            echo "SQL4 statement failed!";
+            echo "SQL statement failed!";
         } else {
             mysqli_stmt_bind_param($stmt, "s", $os);
             mysqli_stmt_execute($stmt);

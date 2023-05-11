@@ -1,0 +1,26 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./public/:/var/www/html/
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+        - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: c2
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1

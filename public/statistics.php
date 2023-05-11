@@ -1,5 +1,4 @@
 <?php
-require_once("conn.php");
 if ($_SESSION['userId'] ==  1) {
 
     //count users
@@ -148,9 +147,7 @@ if ($_SESSION['userId'] ==  1) {
             chart.draw(data, options);
         }
     </script>
-    </body>
 
-    </html>
 <?php
 } else {
     http_response_code(404);

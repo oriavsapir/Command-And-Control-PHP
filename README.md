@@ -7,6 +7,27 @@ https://user-images.githubusercontent.com/85383966/172116231-e8ba1f94-cb7a-4332-
 # WorkFlow:  
 ![workflow](https://user-images.githubusercontent.com/85383966/172119858-380f1671-bc75-440a-900e-869ca8a66b50.png) 
 
+### Getting Started
+
+#### Prerequisites
+
+Docker
+Docker Compose
+
+If you don't have these tools installed, you can download them from the Docker website: https://www.docker.com/
+Running the Application
+
+To run the application, follow these steps:
+
+Clone this repository to your local machine, and run docker compose.:  
+
+```sh
+git clone https://github.com/oriavsapir/Command-And-Control-PHP.git
+cd Command-And-Control-PHP
+docker compose up -d
+```
+
+
 
 ## GUI Preview  
 
@@ -22,6 +43,6 @@ Logs Page:
 <img width="948" alt="log" src="https://user-images.githubusercontent.com/85383966/172116621-74c70b12-9540-4039-87ba-90f5bfc989c9.png">
 
 
-# DISCLAIMER
-Use of this tool is limited only for education or legal work.    
-It must not be used for purposes of study or legal work!
+# Disclaimer:
+
+The instructions provided here are for informational purposes only. The owner and contributors of this repository are not responsible for any damage or loss caused by the use of these instructions. It is your responsibility to ensure that you understand the risks involved and to take appropriate measures to protect your system. Use at your own risk.

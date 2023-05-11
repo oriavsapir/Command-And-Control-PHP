@@ -1,9 +1,14 @@
 <?php
+session_start();
+require_once "conn.php" ;
+
 if (isset($_POST['logoff'])) {
     session_destroy();
-    header("Location:login");
+    header("Location:index");
 }
 $token =  $_SESSION['token'] = bin2hex(random_bytes(32));
+if (isset($_SESSION['userId']) and $_SESSION['userId'] ==  1) {
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +27,7 @@ $token =  $_SESSION['token'] = bin2hex(random_bytes(32));
 
 <body class="bg-light">
     <div class="text-right">
-        <a href="Dashboard" class="text-dark text-decoration-none"> Dashboard |</a>
+        <a href="dashboard" class="text-dark text-decoration-none"> Dashboard |</a>
         <a href="profile" class="text-dark text-decoration-none"> Profile |</a>
         <a href="error_log" class="text-dark text-decoration-none">Server error logs |</a>
         <a href="log" class="text-dark text-decoration-none"> Command and response logs | </a>
@@ -31,3 +36,9 @@ $token =  $_SESSION['token'] = bin2hex(random_bytes(32));
         </form>
         <div class="p-0 m-0 bg-white" style="min-height:10px;"></div>
     </div>
+
+<?php 
+}else{
+    http_response_code(404);
+    die();
+   } ?>

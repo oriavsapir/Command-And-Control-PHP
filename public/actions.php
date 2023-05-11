@@ -1,6 +1,6 @@
 <?php
-require_once("conn.php");
-require_once("functions.php");
+require_once "conn.php" ;
+require_once "functions.php" ;
 
 if (isset($_POST['checker'])) {
     $sql = "SELECT * FROM victims;";
@@ -159,24 +159,24 @@ if (isset($_POST['upload_file']) && isset($_POST['token'])) {
 
 if (isset($_POST['show_table'])) {
 ?>
-    <table class="table table-striped table-bordered victim_table">
-        <thead>
-            <tr>
-                <th>All<input type="checkbox" onClick="toggle(this)"></th>
-                <th>#</th>
-                <th>HostName</th>
-                <th>IP</th>
-                <th>Active</th>
-                <th>Last Seen</th>
-                <th>OS</th>
-                <th>Username</th>
-                <th>Is Admin</th>
-                <th>Identifier</th>
-                <th>Action</th>
+<table class="table table-striped table-bordered victim_table">
+    <thead>
+        <tr>
+            <th>All<input type="checkbox" onClick="toggle(this)"></th>
+            <th>#</th>
+            <th>HostName</th>
+            <th>IP</th>
+            <th>Active</th>
+            <th>Last Seen</th>
+            <th>OS</th>
+            <th>Username</th>
+            <th>Is Admin</th>
+            <th>Identifier</th>
+            <th>Action</th>
 
-            </tr>
-        </thead>
-        <tbody><?php
+        </tr>
+    </thead>
+    <tbody><?php
                 $sql = "SELECT * FROM victims;";
                 $stmt = mysqli_stmt_init($db);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -206,12 +206,12 @@ if (isset($_POST['show_table'])) {
         <button name="log" class="btn btn-info btn-xs float-end"><a href="log?user_identifier=' . htmlspecialchars($row["user_identifier"]) . '">Log </a></button>   </td>';
                 ?>
 
-                    <script>
-                        $(document).ready(function() {
-                            var table = $(".victim_table").DataTable()
-                        });
-                    </script>
-                    </tr> <?php
+        <script>
+        $(document).ready(function() {
+            var table = $(".victim_table").DataTable()
+        });
+        </script>
+        </tr> <?php
                         }
                     }
                     echo ' </tbody></table>';

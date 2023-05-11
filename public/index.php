@@ -1,8 +1,9 @@
 <?php
+session_start();
 $token =  $_SESSION['token'] = bin2hex(random_bytes(32));
 if (isset($_POST['login-submit'])) {
-    require_once("conn.php");
-    require_once("functions.php");
+    require_once "functions.php";
+    require_once "conn.php";
     $user_identifier  = $_SERVER['REMOTE_ADDR'];
     $date = date('Y-m-d H:i:s');
     $username = htmlspecialchars($_POST['username']);
@@ -33,7 +34,7 @@ if (isset($_POST['login-submit'])) {
                     session_regenerate_id(true);
                     $_SESSION['userId'] = 1;
                     addLogs($db, $user_identifier, $date, 'INFO', " $username Login successfully"); //LOG
-                    header("location: ../c2/dashboard");
+                    header("location: ../dashboard");
                     exit();
                 }
             }
