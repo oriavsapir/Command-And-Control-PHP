@@ -22,6 +22,8 @@ git clone https://github.com/oriavsapir/Command-And-Control-PHP.git
 cd Command-And-Control-PHP
 docker compose up -d
 ```
+username : admin  
+password : 1  
 
 # WorkFlow:  
 ![workflow](https://user-images.githubusercontent.com/85383966/172119858-380f1671-bc75-440a-900e-869ca8a66b50.png) 
