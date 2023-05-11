@@ -47,7 +47,7 @@ require_once 'header.php';
         <div class="col-1"></div>
     </div>
 </div>
-<script src="script/script.js"></script>
+<script src="js/script.js"></script>
 <!-- scripts for datatable -->
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <!-- end of the scripts -->

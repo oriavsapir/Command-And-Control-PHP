@@ -1,7 +1,8 @@
 <?php
 if (isset($_POST['login-submit'])) {
-    require_once "functions.php";
-    require_once "conn.php";
+    session_start();
+    require_once "../functions.php";
+    require_once "../conn.php";
     $user_identifier  = $_SERVER['REMOTE_ADDR'];
     $date = date('Y-m-d H:i:s');
     $username = htmlspecialchars($_POST['username']);

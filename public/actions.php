@@ -41,7 +41,7 @@ if (isset($_POST['checker'])) {
 }
 
 //send command
-if ($_SESSION['userId'] ==  1) {
+if (isset($_SESSION['userId']) and $_SESSION['userId'] ==  1) {
     if ((isset($_POST['send_command']) && isset($_POST['user_identifier'])) || isset($_POST['send_command_all'])) {
         if (!empty($_POST['token'])) {
             if (hash_equals($_SESSION['token'], $_POST['token'])) {

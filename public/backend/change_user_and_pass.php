@@ -1,7 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once('conn.php');
-    require_once("functions.php");
+    session_start();
+    require_once '../conn.php';
+    require_once "../functions.php";
     if (isset($_POST['submit_change_pass']) and isset($_POST['current_password']) and isset($_POST['new_password']) and isset($_POST['repeat_password'])) {
         if (!empty($_POST['token'])) {
             if (hash_equals($_SESSION['token'], $_POST['token'])) {
