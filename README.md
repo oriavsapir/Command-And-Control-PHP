@@ -7,8 +7,8 @@ https://user-images.githubusercontent.com/85383966/172116231-e8ba1f94-cb7a-4332-
 
 #### Prerequisites
 
-Docker
-Docker Compose
+1. Docker
+2. Docker Compose  
 
 If you don't have these tools installed, you can download them from the Docker website: https://www.docker.com/
 Running the Application
