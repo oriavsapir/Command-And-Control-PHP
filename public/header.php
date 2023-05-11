@@ -2,10 +2,6 @@
 session_start();
 require_once "conn.php" ;
 
-if (isset($_POST['logoff'])) {
-    session_destroy();
-    header("Location:index");
-}
 $token =  $_SESSION['token'] = bin2hex(random_bytes(32));
 if (isset($_SESSION['userId']) and $_SESSION['userId'] ==  1) {
 
@@ -32,7 +28,7 @@ if (isset($_SESSION['userId']) and $_SESSION['userId'] ==  1) {
         <a href="profile" class="text-dark text-decoration-none">Profile</a> |
         <a href="error_log" class="text-dark text-decoration-none">Server Error Logs</a> |
         <a href="log" class="text-dark text-decoration-none">Command and Response Logs</a> |
-        <form action="" method="post" class="d-inline-block">
+        <form action="backend/logoff.php" method="post" class="d-inline-block">
             <button name="logoff" class="btn btn-light border-0">Logout</button>
         </form>
     </div>
