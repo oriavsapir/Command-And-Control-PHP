@@ -8,7 +8,7 @@ require_once 'header.php';
         <div class="col-md-6">
             <div class="card p-4 border rounded">
                 <h2 class="mb-4">Change Password</h2>
-                <form action="change_user_and_pass" method="post" id="change_password_form">
+                <form action="backend/change_user_and_pass" method="post" id="change_password_form">
                     <div class="form-group">
                         <label for="current_pass">Current Password:</label>
                         <input class="form-control" type="password" name="current_password" id="current_pass" required>
@@ -33,7 +33,7 @@ require_once 'header.php';
             <div class="card p-4 border rounded">
                 <h2 class="mb-4">Change Username</h2>
                 <small>*This is case sensitive</small>
-                <form action="change_user_and_pass" method="post" id="change_username_form">
+                <form action="backend/change_user_and_pass" method="post" id="change_username_form">
                     <div class="form-group">
                         <label for="current_user">Current Username:</label>
                         <input class="form-control" type="text" name="current_username" id="current_user" required>
