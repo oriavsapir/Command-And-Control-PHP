@@ -76,7 +76,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`) VALUES
-(1, 'Admin', '$2y$10$Ow3ku01vWM5vckxODeYAaOx2cJXqwU7TpdTugmGY92jz7GsLa7Tsq');
+(1, 'Admin', '$2y$10$oXEdOuZN3Dv6/66cT9IVr.PBRDTb2fH3iRjtOr/71YD.8MfduGl6C');
 
 -- --------------------------------------------------------
 

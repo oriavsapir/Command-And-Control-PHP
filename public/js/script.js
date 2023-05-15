@@ -1,21 +1,22 @@
 refresh_div()
-counter = check_new_users = 0;
+// counter = check_new_users = 0;
 
-function checker() {
-    jQuery.ajax({
-        url: 'actions.php',
-        data: {
-            "checker": "checker",
-            "counter": counter
-        },
-        type: 'POST',
-        success: function (results) {
-            check_new_users = (results > counter) ? 1 : 0;
-            counter = results;
-        }
-    });
-}
-setInterval(checker, 1000);
+// function checker() {
+//     jQuery.ajax({
+//         url: 'actions.php',
+//         data: {
+//             "checker": "checker",
+//             "counter": counter
+//         },
+//         type: 'POST',
+//         success: function (results) {
+//             check_new_users = (results > counter) ? 1 : 0;
+//             counter = results;
+//         }
+//     });
+// }
+// setInterval(checker, 1000);
+
 
 function refresh_div() {
     jQuery.ajax({
@@ -30,12 +31,12 @@ function refresh_div() {
     });
 }
 
-function refresh_if_new() {
-    if (check_new_users == 1) {
-        refresh_div();
-    }
-}
-setInterval(refresh_if_new, 600);
+// function refresh_if_new() {
+//     if (check_new_users == 1) {
+//         refresh_div();
+//     }
+// }
+// setInterval(refresh_if_new, 600);
 
 function delete_user(user_identifier) {
     var action;
