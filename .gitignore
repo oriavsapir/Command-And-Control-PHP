@@ -10,9 +10,5 @@ backup/
 composer.lock
 .env
 
-# PHPUnit generated files #
-###########################
-phpunit.xml
-/tests/
 
 

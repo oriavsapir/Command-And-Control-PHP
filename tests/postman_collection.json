@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "b7b5349f-7014-4b5e-9d0e-6f376946d24b",
+		"name": "Add-Victim",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://web/victim_controller.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+							{
+							"key": "ip",
+							"value": "172.0.0.2",
+							"type": "text"
+							},
+							{
+							"key": "user_identifier",
+							"value": "123456789123",
+							"type": "text"
+							},
+							{
+							"key": "hostname",
+							"value": "example.com",
+							"type": "text"
+							},
+							{
+							"key": "username",
+							"value": "johndoe",
+							"type": "text"
+							},
+							{
+							"key": "timezone",
+							"value": "UTC",
+							"type": "text"
+							},
+							{
+							"key": "admin",
+							"value": "true",
+							"type": "text"
+							},
+							{
+							"key": "dir_location",
+							"value": "/var/www/html",
+							"type": "text"
+							},
+							{
+							"key": "isadmin",
+							"value": "false",
+							"type": "text"
+							},
+							{
+							"key": "domain",
+							"value": "example.com",
+							"type": "text"
+							},
+							{
+							"key": "os",
+							"value": "linux",
+							"type": "text"
+							},
+							{
+							"key": "uac",
+							"value": "disabled",
+							"type": "text"
+							}
+
+					]
+				},
+				"url": {
+					"raw": "http://web/victim_controller.php",
+					"protocol": "http",
+					"host": [
+						"web"
+					],
+					"path": [
+						"victim_controller.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
