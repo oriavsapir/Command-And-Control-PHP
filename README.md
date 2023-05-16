@@ -25,6 +25,14 @@ docker compose up -d
 username : admin  
 password : 1  
 
+### Tests using postman on docker.
+
+ The tests are written in Postman and run using the Postman command-line tool on docker, Newman.  
+```sh
+docker run --network command-and-control-php_my-network -v "$(pwd)/tests/postman_collection.json:/etc/newman/postman_collection.json" postman/newman run /etc/newman/postman_collection.json
+```
+
+
 # WorkFlow:  
 ![workflow](https://user-images.githubusercontent.com/85383966/172119858-380f1671-bc75-440a-900e-869ca8a66b50.png) 
 
