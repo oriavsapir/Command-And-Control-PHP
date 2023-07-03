@@ -7,5 +7,5 @@ RUN a2enmod rewrite
 #COPY --from=composer:2.5.5 /usr/bin/composer /usr/local/bin/composer
 
 # Install MySQLi extension
-RUN apt update -y && docker-php-ext-install mysqli php-cli php-json php-mbstring  php-xml  php-pcov  php-xdebug
+RUN apt update -y && docker-php-ext-install mysqli
  
